@@ -1,0 +1,16 @@
+Use in package.json:
+
+above start
+
+♦ build : vite build
+
+then name all css files and start with '/'
+
+eg. /style.css
+
+not style.css
+
+now in terminal type: 
+
+♦ npm run build
+
