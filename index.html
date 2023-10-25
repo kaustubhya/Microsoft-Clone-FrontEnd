@@ -11,8 +11,84 @@
     <!-- To bring the mobile size, do right click -> inspect -> on the top left side, click an icon called 'toggle device toolbar' -->
     <!-- We will first clone the app on how it looks in a mobile -->
     <!--Making a navbar  -->
-    <div class="navbar flex justify-betweem items-center">
+    <div class="navbar flex justify-between items-center p-4">
+    
+        <div class="flex justify-center items-center md:order-2">
+              <!-- Making a Humburger class inside it  -->
+            <div class="hamburger inline-block p-4 cursor-pointer md:hidden"> 
+                <!-- md:hidden - This makes sure that the hamburger icon gets hidden when we go to md screens and larger -->
+            <!-- Three small horizontal lines that are used for pop-ups are used in a hamburger -->
+                <div class="line w-6 h-0.5 my-1 bg-black"></div>
+                <div class="line w-6 h-0.5 my-1 bg-black"></div>
+                <div class="line w-6 h-0.5 my-1 bg-black"></div>
+            </div>
+
+            <div class="search md:hidden">Search</div>
+            <!-- hide this centre search icon when screen gets bigger -->
+        </div>
+      
+
+        <!-- Now for navbar's second element, making microsoft logo-->
+        <div class="logo text-center md:order-1 flex">
+            <div class="p-4 w-40"><img src="images/mslogo.png" alt=""> </div>
+            <!-- Press Ctrl + Space for suggessions while typing a command-->
+            <div class="features absolute w-fit md:w-auto md:static bg-gray-200 md:bg-white inset-0 md:flex md:mx-4 md:space-x-2 -translate-x-96 md:translate-x-0">
+                <!-- changing position from absolute to static in md -->
+                <!-- w-fit means fitting the content -->
+                <!-- See position-absolute and inset-0 which makes top-0, bottom-0, right-0 and left-0 -->
+                <!-- Space x gives spaces to each element's children in the X direction -->
+                <div class="feature_item">Microsoft 365</div>
+                <div class="feature_item">Office </div>
+                <div class="feature_item">Windows </div>
+                <div class="feature_item">Surface </div>
+                <div class="feature_item">Xbox </div>
+                <div class="feature_item">Support </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- Also filling the whole navbar now -->
+        <div class="cart text-center md:order-3 flex">
+            <div class="search hidden md:block">All Microsoft Search Icon</div>
+            <!-- normally in small screens, md:block will be hidden but in big devices, an md block for search is shown here for us -->
+            <div>Cart Account</div>       
+        </div>
         
+        <!-- lower md order means that elements come in the front (left) side  -->
     </div>
+     <!-- navbar done -->
+
+
+
+     <div class="container mx-auto">
+        <!-- to center, use mx auto -->
+
+
+     <!-- Making the sidebar now -->
+     <div class="slider flex flex-col-reverse md:flex-row bg-white md:bg-[#f0f0f0] mx-2">
+
+        <!-- Here flex col reverse gives us div right in top and div left in the bottom -->
+        <div class="left flex flex-col justify-center items-center md:items-baseline py-8">
+            <h1 class="text-2xl md:text-4xl mx-5 py-5 font-semibold">
+            Laptops designed by Microsoft
+            </h1> 
+            <p class="w-3/4 mx-5 text-center md:text-left">Surface devices are designed to fit the way you work, learn and create. They are easy to use and safe.      
+            </p>
+            <button class="text-white bg-[#0076b2] hover:bg-[#0e577c] p-2 my-4 mx-5 font-bold">Shop Now </button>
+            <!-- Give same mx to h1, p and button classes -->
+
+        </div>
+        <div class="right">
+            <img src = "images/laptop.avif" alt="">
+
+        </div>
+     </div>
+     </div>
+
+
 </body>
 </html>
+
+ <!-- Resume from 53.00 -->
