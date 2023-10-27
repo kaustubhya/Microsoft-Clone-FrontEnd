@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microsoft – Cloud, Computers, Apps &amp; Gaming</title>
     <link rel="stylesheet" href="/input.css">
+    <link rel="icon" href="msfavicon.ico" sizes="16x16" type="image/png">
+
 </head>
 <body>
     <!-- Do right click -> View Page Source -->
     <!-- To bring the mobile size, do right click -> inspect -> on the top left side, click an icon called 'toggle device toolbar' -->
     <!-- We will first clone the app on how it looks in a mobile -->
     <!--Making a navbar  -->
-    <div class="navbar flex justify-between items-center p-4">
+    <div class="navbar flex justify-between items-center py-4">
     
         <div class="flex justify-center items-center md:order-2">
               <!-- Making a Humburger class inside it  -->
-            <div class="hamburger inline-block p-4 cursor-pointer md:hidden"> 
+            <div class="hamburger inline-block p-1 cursor-pointer md:hidden"> 
                 <!-- md:hidden - This makes sure that the hamburger icon gets hidden when we go to md screens and larger -->
             <!-- Three small horizontal lines that are used for pop-ups are used in a hamburger -->
                 <div class="line w-6 h-0.5 my-1 bg-black"></div>
@@ -23,26 +25,27 @@
                 <div class="line w-6 h-0.5 my-1 bg-black"></div>
             </div>
 
-            <div class="search md:hidden">Search</div>
+            <div class="search md:hidden w-6 rotate-90 mx-3"><img src="images/search.svg" alt=""></div>
+            <!-- Give image width to get search icon -->
             <!-- hide this centre search icon when screen gets bigger -->
         </div>
       
 
         <!-- Now for navbar's second element, making microsoft logo-->
         <div class="logo text-center md:order-1 flex">
-            <div class="p-4 w-40"><img src="images/mslogo.png" alt=""> </div>
+            <div class="mx-10 w-24 md:py-4 md:w-[17%]"><img src="images/mslogo.png" alt=""> </div>
             <!-- Press Ctrl + Space for suggessions while typing a command-->
-            <div class="features absolute w-fit md:w-auto md:static bg-gray-200 md:bg-white inset-0 md:flex md:mx-4 md:space-x-2 -translate-x-96 md:translate-x-0">
+            <div class="features absolute w-fit md:w-auto md:static bg-gray-200 md:bg-white inset-0 md:flex md:mx-4 md:space-x-6 -translate-x-96 md:translate-x-0 md:items-center">
                 <!-- changing position from absolute to static in md -->
                 <!-- w-fit means fitting the content -->
                 <!-- See position-absolute and inset-0 which makes top-0, bottom-0, right-0 and left-0 -->
                 <!-- Space x gives spaces to each element's children in the X direction -->
-                <div class="feature_item">Microsoft 365</div>
-                <div class="feature_item">Office </div>
-                <div class="feature_item">Windows </div>
-                <div class="feature_item">Surface </div>
-                <div class="feature_item">Xbox </div>
-                <div class="feature_item">Support </div>
+                <div class="feature_item hover:underline hover:underline-offset-8 cursor-pointer">Microsoft 365</div>
+                <div class="feature_item hover:underline hover:underline-offset-8 cursor-pointer">Office </div>
+                <div class="feature_item hover:underline hover:underline-offset-8 cursor-pointer">Windows </div>
+                <div class="feature_item hover:underline hover:underline-offset-8 cursor-pointer">Surface </div>
+                <div class="feature_item hover:underline hover:underline-offset-8 cursor-pointer">Xbox </div>
+                <div class="feature_item hover:underline hover:underline-offset-8 cursor-pointer">Support </div>
 
 
             </div>
@@ -51,9 +54,14 @@
 
         <!-- Also filling the whole navbar now -->
         <div class="cart text-center md:order-3 flex">
-            <div class="search hidden md:block">All Microsoft Search Icon</div>
+            <div class="search hidden md:block md:mx-3">All Microsoft</div>
+            <div class="mr-2 md:mr-4">Search</div>
+            <img class="w-4 rotate-90 mr-2 md:mr-4" src="images/search.svg" alt="">
             <!-- normally in small screens, md:block will be hidden but in big devices, an md block for search is shown here for us -->
-            <div>Cart Account</div>       
+            <div class="flex">
+                <img class="w-4 mr-2 md:mr-4" src="images/cart.svg" alt="">
+                <img class="w-4 mr-2 md:mr-4" src="images/user-profile-icon.svg" alt="">
+            </div>       
         </div>
         
         <!-- lower md order means that elements come in the front (left) side  -->
@@ -61,7 +69,7 @@
      <!-- navbar done -->
 
 
-
+    <!-- making the sidebar container -->
      <div class="container mx-auto">
         <!-- to center, use mx auto -->
 
@@ -70,7 +78,7 @@
      <div class="slider flex flex-col-reverse md:flex-row bg-white md:bg-[#f0f0f0] mx-2">
 
         <!-- Here flex col reverse gives us div right in top and div left in the bottom -->
-        <div class="left flex flex-col justify-center items-center md:items-baseline py-8">
+        <div class="left flex flex-col justify-center items-center md:items-baseline py-8 md:ml-28 ">
             <h1 class="text-2xl md:text-4xl mx-5 py-5 font-semibold">
             Laptops designed by Microsoft
             </h1> 
@@ -81,11 +89,42 @@
 
         </div>
         <div class="right">
-            <img src = "images/laptop.avif" alt="">
+            <img class = " w-[60rem] md:w-[64rem]" src = "images/laptop.avif" alt="">
 
         </div>
      </div>
+
+     <!-- Making the promotion bar now -->
+     <div class="promo_container my-5">
+        <div class="promo space-y-6 flex flex-col lg:flex-row md:justify-center md:space-x-14">
+            <div class="item flex items-center mx-4 space-x-2 mt-6 md:flex-col">
+                <img src="images/msicon.webp" alt="">
+                <span class="font-semibold text-[#0067b8] underline md:mt-3"><a href = "https://www.microsoft.com/ro-ro/microsoft-365/buy/compare-all-microsoft-365-products?market=ro&icid=MSCOM_QL_M365">Choose your Microsoft 365</a></span>
+            </div>
+
+
+            <div class="item flex items-center mx-4 space-x-2 mt-6 md:flex-col">
+                <img src="images/msicon2.webp" alt="">
+                <span class="font-semibold text-[#0067b8] underline md:mt-3"><a href = "https://www.microsoft.com/ro-ro/surface?icid=MSCOM_QL_Surface">Explore Surface Devices</a></span>
+            </div>
+        
+        
+            <div class="item flex items-center mx-4 space-x-2 mt-6 md:flex-col">
+                <img src="images/msicon.webp" alt="">
+                <span class="font-semibold text-[#0067b8] underline md:mt-3"><a href = "https://www.microsoft.com/ro-ro/windows/get-windows-11?icid=MSCOM_QL_Windows&r=1">Get Windows 11</a></span>
+            </div>
+        </div>
+    </div>
+
      </div>
+     <!--  sidebar container over here  -->
+
+     
+     
+      
+     
+
+
 
 
 </body>
